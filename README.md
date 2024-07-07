@@ -299,7 +299,7 @@ Description: Creates and association between an actor and a movie based on their
 
 Example Request:
 ```bash
-curl -X POST http://localhost:8080/associate -H "Content-Type: application/json" -d '{"actor_id": 1, "movie_id": 2}'
+curl -X POST http://localhost:8080/associate -H "Authorization: Bearer YOUR_ACCESS_TOKEN" -H "Content-Type: application/json" -d '{"actor_id": 1, "movie_id": 2}'
 ```
 
 Example Response:

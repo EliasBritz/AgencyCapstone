@@ -299,7 +299,7 @@ Description: Creates and association between an actor and a movie based on their
 
 Example Request:
 ```bash
-curl -X POST http://localhost:8080/associate/ -H "Content-Type: application/json" -d '{"actor_id": 1, "movie_id": 2}'
+curl -X POST http://localhost:8080/associate -H "Content-Type: application/json" -d '{"actor_id": 1, "movie_id": 2}'
 ```
 
 Example Response:
@@ -417,6 +417,8 @@ docker run -p 8080:8080 ImageName
 
 # Deployment and Hosting
 The Application will be deployed on Render Cloud. The Application run on an free instance, which may cause delays by 50 seconds or more, because it will spin down with inactivity. So don't despair!
+
+Application URL: https://agencycapstone.onrender.com
 
 To request the API you can use the Access-Token from before, aslong as its not expired. If so you would need to login again and retrieve a access token. *Refer: Auth0 Role Assignement*
 

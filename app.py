@@ -14,6 +14,7 @@ def create_app(test_config=False):
 
     migrate = Migrate(app, db)
 
+    # Run the upgrade, which will create the tables on startup
     with app.app_context():
         upgrade()
 

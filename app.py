@@ -1,5 +1,5 @@
 from flask import Flask, abort, jsonify, request
-from flask_migrate import Migrate
+from flask_migrate import Migrate, upgrade
 
 from flask_cors import CORS
 from auth import requires_auth, AuthError
@@ -13,6 +13,9 @@ def create_app(test_config=False):
     setup_db(app)
 
     migrate = Migrate(app, db)
+
+    with app.app_context():
+        upgrade()
 
     CORS(app, resources={r"/*": {"origins": "*"}})
 

@@ -404,7 +404,7 @@ Once you have run the Tests and would like to repeat it, you'll have to run the 
 ```bash
 psql -U username -d agencytest -f init_test_db.sql
 ```
-
+*Notice: The Postman Tests don't request every Endpoint, since we only test the authentication mechanism here.*
 # Dockerization and Local Deployment
 To dockerize the application simply run:
 ```bash
@@ -416,5 +416,7 @@ docker run -p 8080:8080 ImageName
 ```
 
 # Deployment and Hosting
+The Application will be deployed on Render Cloud. The Application run on an free instance, which may cause delays by 50 seconds or more, because it will spin down with inactivity. So don't despair!
 
+To request the API you can use the Access-Token from before, aslong as its not expired. If so you would need to login again and retrieve a access token. *Refer: Auth0 Role Assignement*
 

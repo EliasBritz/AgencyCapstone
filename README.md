@@ -417,13 +417,4 @@ docker run -p 8080:8080 ImageName
 
 # Deployment and Hosting
 
-# TODO: Put in Info Box and Delete from ReadMe 
-### Casting Assistant
-Mail: casting_assistant@mail.com\
-Password: ContentAssistant1!
-### Casting director
-Mail: casting_director@mail.com\
-Password: ContentDirector1!
-### Executive Producer
-Mail: executive_producer@mail.com\
-Password: ExecutiveProducer1!
+
